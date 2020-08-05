@@ -1,0 +1,58 @@
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.exe
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.deps.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.runtimeconfig.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.runtimeconfig.dev.json
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\WebApi.pdb
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.csprojAssemblyReference.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfoInputs.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfo.cs
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CoreCompileInputs.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.RazorTargetAssemblyInfo.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CopyComplete
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.xml
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
+D:\MY_Project\Rest API\DotnetCore\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\FireSharp.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\FireSharp.Serialization.JsonNet.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\MY_Project\Rest API\DotnetCore\WebApi\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.exe
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.deps.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.runtimeconfig.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.runtimeconfig.dev.json
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\WebApi.pdb
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\FireSharp.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\FireSharp.Serialization.JsonNet.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.csprojAssemblyReference.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfoInputs.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfo.cs
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CopyComplete
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.xml
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
+C:\Users\IT16072020\Desktop\Test\dotNetCoreAPI\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
