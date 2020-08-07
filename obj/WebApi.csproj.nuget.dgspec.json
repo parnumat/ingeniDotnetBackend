@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\IT16072020\\Desktop\\Test\\dotNetCoreAPI\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\IT16072020\\Desktop\\Test\\dotNetCoreAPI\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\IT16072020\\Desktop\\Test\\dotNetCoreAPI\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "c:\\Users\\IT16072020\\Desktop\\Test\\dotNetCoreAPI\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj",
         "packagesPath": "C:\\Users\\IT16072020\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\IT16072020\\Desktop\\Test\\dotNetCoreAPI\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IT16072020\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,9 +38,45 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Dapper.FluentMap": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "Dapper.Oracle": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
             "FireSharp.Serialization.JsonNet": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.19.80, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

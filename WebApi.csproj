@@ -3,7 +3,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1"/>
-    <PackageReference Include="FireSharp.Serialization.JsonNet" Version="1.1.0"/>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <PackageReference Include="System.DirectoryServices" Version="4.7.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+    <PackageReference Include="FireSharp.Serialization.JsonNet" Version="1.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Dapper.FluentMap" Version="1.8.1" />
+    <PackageReference Include="Dapper.Oracle" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.80" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ingeni.AD">
+      <HintPath>..\..\..\Desktop\Ingeni.AD.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
