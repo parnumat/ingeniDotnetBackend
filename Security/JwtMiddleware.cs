@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebApi.Services;
 
-namespace WebApi.Helpers
+namespace WebApi.Security
 {
     public class JwtMiddleware
     {

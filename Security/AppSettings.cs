@@ -1,4 +1,4 @@
-namespace WebApi.Helpers
+namespace WebApi.Security
 {
     public class AppSettings
     {

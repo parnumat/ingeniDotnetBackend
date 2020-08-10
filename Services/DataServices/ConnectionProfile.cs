@@ -13,12 +13,6 @@ namespace ingeniProjectFDotnetBackend.Services.DataServices {
             string jsonMessage = JsonConvert.SerializeObject (dataTable);
             return jsonMessage;
         }
-        // public static string SetProfile (string user) {
-        //     DataTable dataTable = Sql.Execute ("SELECT distinct ORG_ID,EMP_ID,EMP_FNAME,EMP_LNAME,POS_ID,ROLE_ID,IsNull(E_MAIL,'') AS E_MAIL,IsNull(EMP_NICKNAME,'') AS EMP_NICKNAME FROM  PORTAL_PROD.dbo.MV_ALL_USER WHERE AD_USER_ID = '" + user + "'");
-        //     string jsonMessage = JsonConvert.SerializeObject (dataTable);
-        //     return jsonMessage;
-        // }
-
         public static List<UserProfileFromSQl> SetProfile (string user) {
             DataTable dataTable = Sql.Execute ("SELECT distinct ORG_ID,EMP_ID,EMP_FNAME,EMP_LNAME,POS_ID,ROLE_ID,IsNull(E_MAIL,'') AS E_MAIL,IsNull(EMP_NICKNAME,'') AS EMP_NICKNAME FROM  PORTAL_PROD.dbo.MV_ALL_USER WHERE AD_USER_ID = '" + user + "'");
             return ConvertDataTable<UserProfileFromSQl> (dataTable);

@@ -1,6 +1,6 @@
 namespace WebApi.Models
 {
-    public class testModel
+    public class GetMenuModel
     {
         public string ID { get; set; }
         public string appName { get; set; }

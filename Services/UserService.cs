@@ -4,15 +4,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 using ingeniProjectFDotnetBackend.Models.Profiles;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
-using WebApi.Entities;
-using WebApi.Helpers;
+using WebApi.Security;
 using WebApi.Models;
 
 namespace WebApi.Services {

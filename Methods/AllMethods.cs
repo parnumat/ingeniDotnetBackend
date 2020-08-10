@@ -8,7 +8,7 @@ namespace WebApi.Methods {
     public class AllMethods {
         private readonly IMapper _mapper;
         public AllMethods (IMapper mapper) => _mapper = mapper;
-        public async System.Threading.Tasks.Task<List<testModel>> GetIconMenu (UserInputModel model) {
+        public async System.Threading.Tasks.Task<List<GetMenuModel>> GetIconMenu (UserInputModel model) {
             List<Param> param = new List<Param> () {
             new Param () { ParamName = "AS_USER_ID", ParamType = ParamMeterTypeEnum.STRING, ParamValue = model.user_id },
             new Param () { ParamName = "AS_MENU_GRP", ParamType = ParamMeterTypeEnum.STRING, ParamValue = model.group_id },
@@ -17,7 +17,7 @@ namespace WebApi.Methods {
             if (results == null)
                 return null;
             var result = _mapper.Map<IEnumerable<AppUserToolModel>> (results);
-            var resultReal = _mapper.Map<IEnumerable<AppUserToolModel>, IEnumerable<testModel>> (result).ToList ();
+            var resultReal = _mapper.Map<IEnumerable<AppUserToolModel>, IEnumerable<GetMenuModel>> (result).ToList ();
             return resultReal;
         }
     }

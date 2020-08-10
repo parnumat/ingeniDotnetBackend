@@ -65,13 +65,10 @@ C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netco
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\WebApi.runtimeconfig.dev.json
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\WebApi.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\WebApi.pdb
-C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\FireSharp.dll
-C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\FireSharp.Serialization.JsonNet.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\RestSharp.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\obj\Debug\netcoreapp3.1\WebApi.csprojAssemblyReference.cache
 C:\Users\IT16072020\Documents\GitHub\ingeniProjectFDotnetBackend\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfoInputs.cache
