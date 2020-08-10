@@ -7,8 +7,8 @@ using System.Text;
 using ingeniProjectFDotnetBackend.Models.Profiles;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using WebApi.Security;
 using WebApi.Models;
+using WebApi.Security;
 
 namespace WebApi.Services {
     public interface IUserService {
@@ -19,17 +19,22 @@ namespace WebApi.Services {
 
     public class UserService : IUserService {
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
-        // private IFirebaseConfig config = new FirebaseConfig {
-        //     BasePath = "https://cworkshop-a0be0.firebaseio.com/",
-        //     AuthSecret = "47FZbETdl6nAXR5rIgrXvXUq1ktJ6lfKt6f287HY"
-        // };
-        // private IFirebaseClient client;
+        // DataBaseHostEnum _users = new DataBaseHostEnum();
         List<UserProfile> _users = new List<UserProfile> {
             new UserProfile {
-            ORG_ID = "IGS",
+            ORG_ID = "OPPN"
+            },
+            new UserProfile {
+            ORG_ID = "LAP"
+            },
+            new UserProfile {
+            ORG_ID = "KPP"
             },
             new UserProfile {
             ORG_ID = "KPR"
+            },
+            new UserProfile {
+            ORG_ID = "IGS"
             }
         };
         private readonly AppSettings _appSettings;

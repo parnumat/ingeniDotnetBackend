@@ -19,14 +19,14 @@ namespace WebApi.Controllers {
             _mapper = mapper;
         }
 
-        [HttpPost ("test")]
-        public IActionResult test (UserProfileFromSQl model) {
-            var result = _mapper.Map<UserProfile> (model);
-            var response = _userService.Authenticate (result);
-            if (response == null)
-                return BadRequest (new { message = "Data could not be null" });
-            return Ok (response);
-        }
+        // [HttpPost ("test")]
+        // public IActionResult test (UserProfileFromSQl model) {
+        //     var result = _mapper.Map<UserProfile> (model);
+        //     var response = _userService.Authenticate (result);
+        //     if (response == null)
+        //         return BadRequest (new { message = "Data could not be null" });
+        //     return Ok (response);
+        // }
 
         [HttpPost ("Login")]
         public ActionResult Login (AuthenticateRequest model) {
