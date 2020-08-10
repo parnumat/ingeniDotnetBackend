@@ -13,7 +13,7 @@ API PATH:
 
 
   Get Profile:  https://localhost:5001/users/getproflie  
-  ***equest: {
+  ***Request: {
   "token": "value token
   }
 
