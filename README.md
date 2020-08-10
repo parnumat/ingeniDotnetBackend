@@ -6,12 +6,14 @@ API PATH:
   
   Get Menu Icon: https://localhost:5001/menu  
   [Request: {
-    "fn": "fn1",
-    "user_id": "600045",
-    "group_id": "ALL"
+    "fn": "value fn",
+    "user_id": "value user_id",
+    "group_id": "value group_id"
     }]
 
 
   Get Profile:  https://localhost:5001/users/getproflie  
-  **[equest: token]
+  [equest: {
+  "token": "value token
+  }]
 
