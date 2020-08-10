@@ -26,7 +26,22 @@ namespace WebApi.Controllers {
 
         [Authorize]
         [HttpPost ("")]
-        public async Task<ActionResult<AppUserToolModel>> Poststring (UserInputModel model) {
+        public async Task<ActionResult<AppUserToolModel>> PostToGetIcon (UserInputModel model) {
+            try {
+                switch (model.fn) {
+                    case "fn1":
+                        _results = new AllMethods (_mapper).GetIconMenu (model);
+                        break;
+                    default: //ยังไม่สนใจ fn 
+                        _results = new AllMethods (_mapper).GetIconMenu (model);
+                        break;
+                }
+                if (_results != null)
+                    return Ok (_results);
+                return BadRequest (new { message = "Something wa wrong!!" });
+            } catch (Exception e) {
+                return BadRequest (new { message = e.Message });
+            }
 
             // List<Param> param = new List<Param> () {
             //     new Param () { ParamName = "AS_USER_ID", ParamType = ParamMeterTypeEnum.STRING, ParamValue = model.user_id },
@@ -38,21 +53,6 @@ namespace WebApi.Controllers {
             // var result = _mapper.Map<IEnumerable<AppUserToolModel>> (results);
             // var resultReal = _mapper.Map<IEnumerable<AppUserToolModel>, IEnumerable<testModel>> (result).ToList ();
             // return Ok (resultReal);
-            try {
-                switch (model.fn) {
-                    case "fn1":
-                        _results = new AllMethods (_mapper).GetIconMenu (model);
-                        break;
-                    default://ยังไม่สนใจ fn 
-                        _results = new AllMethods (_mapper).GetIconMenu (model);
-                        break;
-                }
-                if (_results != null)
-                    return Ok (_results);
-                return BadRequest (new { message = "Something wa wrong!!" });
-            } catch (Exception e) {
-                return BadRequest (new { message = e.Message });
-            }
         }
         //Ex
         // [{

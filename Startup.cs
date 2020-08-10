@@ -25,9 +25,9 @@ namespace WebApi {
                 opt.AddPolicy ("CorsPolicy", policy => {
                     //policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
                     //policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200").AllowCredentials();
-                    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                    // policy.AllowAnyHeader ().AllowAnyMethod ().WithOrigins ("http://localhost:4200")
-                    //     .WithExposedHeaders ("WWW-Authenticate").AllowCredentials ();
+                    // policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    policy.AllowAnyHeader ().AllowAnyMethod ().WithOrigins ("http://localhost:4200")
+                        .WithExposedHeaders ("WWW-Authenticate").AllowCredentials ();
                 });
             });
 
