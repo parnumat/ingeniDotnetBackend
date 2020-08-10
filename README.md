@@ -5,11 +5,11 @@ API PATH:
   ######### NEED LOGIN TO GET TOKEN #########
   
   Get Menu Icon: https://localhost:5001/menu  
-  ***[Request: fn]
-  ***[Request: group_id]
-  ***[Request: user_id]
+  *[Request: fn]
+  *[Request: group_id]
+  *[Request: user_id]
 
 
   Get Profile:  https://localhost:5001/users/getproflie  
-  ***[equest: token]
+  **[equest: token]
 
