@@ -1,6 +1,10 @@
 API PATH:
 
   Login: https://localhost:5001/users/login
+  ***Request:{
+    "username": "value username",
+    "password": "value password"
+}
   
   ######### NEED LOGIN TO GET TOKEN #########
   
