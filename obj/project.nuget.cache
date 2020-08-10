@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iV6O/Fu8Pjd6WFR8yw8lcVVLQTjIjRiv0qU9LB2S/TJCkKEQl4/UM3lI65T6uL0yTzoGriL9HPhRvDpMg6bvPQ==",
+  "dgSpecHash": "L9bjTxaHuB4P2/LDxkfcNHncbvijS/+LnHMDttwacxgSWM17AnBusTjyGw9hD+whlqbnfBghSk+MeztkKQfYvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniDotnetBackend\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IT16072020\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\IT16072020\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",

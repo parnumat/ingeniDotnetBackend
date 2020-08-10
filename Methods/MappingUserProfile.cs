@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using ingeniProjectFDotnetBackend.Models.Profiles;
-using ingeniProjectFDotnetBackend.Services.DataServices;
+using WebApi.Models.Profiles;
+using WebApi.Services.DataServices;
 using Newtonsoft.Json.Linq;
 using WebApi.Models;
 
-namespace ingeniProjectFDotnetBackend.Methods {
+namespace WebApi.Methods {
     public class MappingUserProfile {
         private readonly IMapper _mapper;
         public MappingUserProfile (IMapper mapper) => _mapper = mapper;

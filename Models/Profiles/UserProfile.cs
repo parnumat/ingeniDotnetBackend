@@ -1,4 +1,4 @@
-namespace ingeniProjectFDotnetBackend.Models.Profiles {
+namespace WebApi.Models.Profiles {
     public class UserProfile {
         public string ORG_ID { get; set; }
         public string EMP_ID { get; set; }

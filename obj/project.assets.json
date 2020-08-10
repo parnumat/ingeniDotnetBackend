@@ -6662,11 +6662,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniDotnetBackend\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\WebApi.csproj",
+      "projectPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniDotnetBackend\\WebApi.csproj",
       "packagesPath": "C:\\Users\\IT16072020\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniProjectFDotnetBackend\\obj\\",
+      "outputPath": "C:\\Users\\IT16072020\\Documents\\GitHub\\ingeniDotnetBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\IT16072020\\AppData\\Roaming\\NuGet\\NuGet.Config",

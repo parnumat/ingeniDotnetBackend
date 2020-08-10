@@ -1,4 +1,4 @@
-using ingeniProjectFDotnetBackend.Models.Profiles;
+using WebApi.Models.Profiles;
 using Newtonsoft.Json.Linq;
 using WebApi.Models;
 

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
-using ingeniProjectFDotnetBackend.Models.Profiles;
+using WebApi.Models.Profiles;
 using Newtonsoft.Json;
 
-namespace ingeniProjectFDotnetBackend.Services.DataServices {
+namespace WebApi.Services.DataServices {
     public class ConnectionProfile {
         public static string checkUsersALL () {
             DataTable dataTable = Sql.Execute ("SELECT AD_USER_ID, EMP_ID, EMP_FNAME, EMP_LNAME FROM  PORTAL_PROD.dbo.MV_ALL_USER WHERE AD_USER_ID IS NOT NULL");

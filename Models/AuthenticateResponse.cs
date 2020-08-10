@@ -1,5 +1,4 @@
-using System;
-using ingeniProjectFDotnetBackend.Models.Profiles;
+using WebApi.Models.Profiles;
 
 namespace WebApi.Models {
     public class AuthenticateResponse {

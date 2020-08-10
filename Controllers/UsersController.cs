@@ -1,9 +1,7 @@
 using System;
 using AutoMapper;
-using ingeniProjectFDotnetBackend.Methods;
-using ingeniProjectFDotnetBackend.Models.Profiles;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Methods;
 using WebApi.Models;
 using WebApi.Services;
 using WebApi.Services.DataServices;
