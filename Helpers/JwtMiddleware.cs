@@ -48,10 +48,10 @@ namespace WebApi.Helpers
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
+                var org = jwtToken.Claims.First(x => x.Type == "ORG_ID").Value;
 
                 // attach user to context on successful jwt validation
-                context.Items["User"] = userService.GetById(userId);
+                context.Items["UserProfile"] = userService.GetByOrg(org);
             }
             catch
             {
