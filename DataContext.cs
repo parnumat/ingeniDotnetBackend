@@ -892,7 +892,6 @@ namespace WebApi {
                 if (conn.State == ConnectionState.Closed) {
                     conn.Open ();
                 }
-                Console.WriteLine ("Hello");
                 if (conn.State == ConnectionState.Open) {
                     var rawResult = await SqlMapper.QueryAsync (conn, storedName, param : dyParam, commandType : CommandType.StoredProcedure);
                     return rawResult;

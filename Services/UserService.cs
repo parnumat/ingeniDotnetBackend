@@ -7,6 +7,7 @@ using System.Text;
 using ingeniProjectFDotnetBackend.Models.Profiles;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using WebApi.Models;
 using WebApi.Security;
 
@@ -15,6 +16,7 @@ namespace WebApi.Services {
         AuthenticateResponse Authenticate (UserProfile model);
         IEnumerable<UserProfile> GetAll ();
         UserProfile GetByOrg (string org);
+        UserProfile DecodeToken (string token);
     }
 
     public class UserService : IUserService {
@@ -71,15 +73,67 @@ namespace WebApi.Services {
 
         private string generateJwtToken (UserProfile user) {
             // generate token that is valid for 1 days
+            var claims = new List<Claim> {
+                new Claim ("ORG_ID", user.ORG_ID),
+                 new Claim ("EMP_ID", user.EMP_ID),
+                new Claim ("EMP_NAME", user.EMP_NAME),
+                new Claim ("NICKNAME", user.NICKNAME),
+                new Claim ("EMAIL", user.EMAIL),
+                new Claim ("POS_ROLE", user.POS_ROLE)
+            };
             var tokenHandler = new JwtSecurityTokenHandler ();
             var key = Encoding.ASCII.GetBytes (_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor {
-                Subject = new ClaimsIdentity (new [] { new Claim ("ORG_ID", user.ORG_ID) }),
+                Subject = new ClaimsIdentity (claims),
                 Expires = DateTime.UtcNow.AddDays (1),
                 SigningCredentials = new SigningCredentials (new SymmetricSecurityKey (key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken (tokenDescriptor);
             return tokenHandler.WriteToken (token);
+        }
+        public UserProfile DecodeToken (string token) {
+            var jwtHandler = new JwtSecurityTokenHandler ();
+            if (!jwtHandler.CanReadToken (token))
+                return null;
+
+            var tokenJwt = jwtHandler.ReadJwtToken (token);
+            var jwtPayload = JsonConvert.SerializeObject (tokenJwt.Claims.Select (c => new { c.Type, c.Value }));
+
+            List<JWTDecode> jwtDecode = JsonConvert.DeserializeObject<List<JWTDecode>> (jwtPayload);
+
+            UserProfile user = new UserProfile ();
+            foreach (JWTDecode j in jwtDecode) {
+                switch (j.Type) {
+                    case "EMP_NAME":
+                        user.EMP_NAME = j.Value;
+                        break;
+                    case "EMP_ID":
+                        user.EMP_ID = j.Value;
+                        break;
+                    case "NICKNAME":
+                        user.NICKNAME = j.Value;
+                        break;
+                    case "EMAIL":
+                        user.EMAIL = j.Value;
+                        break;
+                    case "ORG_ID":
+                        user.ORG_ID = j.Value;
+                        break;
+                    case "POS_ROLE":
+                        user.POS_ROLE = j.Value;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return user;
+
+            // var tokenHandler = new JwtSecurityTokenHandler();
+            // var securityToken = tokenHandler.ReadToken(token) as JwtSecurityToken;
+
+            // var stringClaimValue = securityToken.Claims.First(claim => claim.Type == claimType).Value;
+            // return stringClaimValue;
         }
     }
 }

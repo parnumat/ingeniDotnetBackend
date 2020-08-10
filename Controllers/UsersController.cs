@@ -47,9 +47,10 @@ namespace WebApi.Controllers {
         }
 
         [Authorize]
-        [HttpGet]
-        public IActionResult GetAll () {
-            return Ok ("users");
+        [HttpPost ("getProflie")]
+        public IActionResult GetAllProfile (UserInputModel model) {
+            var userProfike = _userService.DecodeToken (model.token);
+            return Ok (userProfike);
         }
 
         [Authorize]
