@@ -75,7 +75,7 @@ namespace WebApi.Services {
             // generate token that is valid for 1 days
             var claims = new List<Claim> {
                 new Claim ("ORG_ID", user.ORG_ID),
-                 new Claim ("EMP_ID", user.EMP_ID),
+                new Claim ("EMP_ID", user.EMP_ID),
                 new Claim ("EMP_NAME", user.EMP_NAME),
                 new Claim ("NICKNAME", user.NICKNAME),
                 new Claim ("EMAIL", user.EMAIL),
