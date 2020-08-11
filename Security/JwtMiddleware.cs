@@ -49,6 +49,11 @@ namespace WebApi.Security
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 var org = jwtToken.Claims.First(x => x.Type == "org").Value;
+                var userID = jwtToken.Claims.First(x => x.Type == "userID").Value;
+                var userName = jwtToken.Claims.First(x => x.Type == "userName").Value;
+                var nickname = jwtToken.Claims.First(x => x.Type == "nickname").Value;
+                var email = jwtToken.Claims.First(x => x.Type == "email").Value;
+                var posrole = jwtToken.Claims.First(x => x.Type == "posrole").Value;
 
                 // attach user to context on successful jwt validation
                 context.Items["UserProfile"] = userService.GetByOrg(org);
