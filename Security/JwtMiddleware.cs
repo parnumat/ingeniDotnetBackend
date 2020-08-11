@@ -48,7 +48,7 @@ namespace WebApi.Security
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var org = jwtToken.Claims.First(x => x.Type == "ORG_ID").Value;
+                var org = jwtToken.Claims.First(x => x.Type == "org").Value;
 
                 // attach user to context on successful jwt validation
                 context.Items["UserProfile"] = userService.GetByOrg(org);

@@ -27,7 +27,7 @@ namespace WebApi.Controllers {
         // }
 
         [HttpPost ("Login")]
-        public ActionResult Login (AuthenticateRequest model) {
+        public ActionResult<string> Login (AuthenticateRequest model) {
             // Authenticate users FROM ingeni Database
             Boolean status = AuthenticateUsers.AuthenticateUser (model);
             //You're our employee
@@ -40,7 +40,8 @@ namespace WebApi.Controllers {
                 return Ok (responses);
             }
             //You're not our employee
-            return BadRequest (new { message = "Username or password is incorrect" });
+            return Unauthorized (new { message = "Username or password is incorrect" });
+            //"{ \"message\": \"Username or password is incorrect\" }"
 
         }
 

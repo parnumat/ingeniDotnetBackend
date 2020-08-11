@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 [AttributeUsage (AttributeTargets.Class | AttributeTargets.Method)]
 public class AuthorizeAttribute : Attribute, IAuthorizationFilter {
     public void OnAuthorization (AuthorizationFilterContext context) {
-        var user = (UserProfile) context.HttpContext.Items["UserProfile"];
+        var user = (DataORG) context.HttpContext.Items["UserProfile"];
         if (user == null) {
             Console.WriteLine(user);
             // not logged in

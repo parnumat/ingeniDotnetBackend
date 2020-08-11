@@ -11,13 +11,13 @@ namespace WebApi.Profiles {
                 .ForMember (d => d.img, o => o.MapFrom (s => s.ICON_SRC));
 
             CreateMap<UserProfileFromSQl, UserProfile> ()
-                .ForMember (d => d.ORG_ID, o => o.MapFrom (s => s.ORG_ID))
-                .ForMember (d => d.EMP_ID, o => o.MapFrom (s => s.EMP_ID))
-                .ForMember (d => d.EMP_NAME, o => o.MapFrom (s => s.EMP_FNAME + ' ' + s.EMP_LNAME))
+                .ForMember (d => d.org, o => o.MapFrom (s => s.ORG_ID))
+                .ForMember (d => d.userID, o => o.MapFrom (s => s.EMP_ID))
+                .ForMember (d => d.userName, o => o.MapFrom (s => s.EMP_FNAME + ' ' + s.EMP_LNAME))
                 // .ForMember (d => d.EMP_NAME_ENG, o => o.MapFrom (s => s.EMP_FNAME + ' ' + s.EMP_LNAME))
-                .ForMember (d => d.POS_ROLE, o => o.MapFrom (s => s.POS_ID + '-' + s.ROLE_ID))
-                .ForMember (d => d.EMAIL, o => o.MapFrom (s => s.E_MAIL))
-                .ForMember (d => d.NICKNAME, o => o.MapFrom (s => s.EMP_NICKNAME));
+                .ForMember (d => d.posrole, o => o.MapFrom (s => s.POS_ID + '-' + s.ROLE_ID))
+                .ForMember (d => d.email, o => o.MapFrom (s => s.E_MAIL))
+                .ForMember (d => d.nickname, o => o.MapFrom (s => s.EMP_NICKNAME));
         }
     }
 }

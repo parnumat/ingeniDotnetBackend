@@ -14,29 +14,30 @@ using WebApi.Security;
 namespace WebApi.Services {
     public interface IUserService {
         AuthenticateResponse Authenticate (UserProfile model);
-        IEnumerable<UserProfile> GetAll ();
-        UserProfile GetByOrg (string org);
+        IEnumerable<DataORG> GetAll ();
+        DataORG GetByOrg (string org);
         UserProfile DecodeToken (string token);
+        // string getsss (string org);
     }
 
     public class UserService : IUserService {
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
-        // DataBaseHostEnum _users = new DataBaseHostEnum();
-        List<UserProfile> _users = new List<UserProfile> {
-            new UserProfile {
-            ORG_ID = "OPPN"
+        // DataBaseHostEnum _user = DataBaseHostEnum.;
+        List<DataORG> _users = new List<DataORG> {
+            new DataORG {
+            org = "OPPN"
             },
-            new UserProfile {
-            ORG_ID = "LAP"
+            new DataORG {
+            org = "LAP"
             },
-            new UserProfile {
-            ORG_ID = "KPP"
+            new DataORG {
+            org = "KPP"
             },
-            new UserProfile {
-            ORG_ID = "KPR"
+            new DataORG {
+            org = "KPR"
             },
-            new UserProfile {
-            ORG_ID = "IGS"
+            new DataORG {
+            org = "IGS"
             }
         };
         private readonly AppSettings _appSettings;
@@ -61,12 +62,33 @@ namespace WebApi.Services {
             return new AuthenticateResponse (model, token);
         }
 
-        public IEnumerable<UserProfile> GetAll () {
+        public IEnumerable<DataORG> GetAll () {
             return _users;
         }
 
-        public UserProfile GetByOrg (string org) {
-            return _users.FirstOrDefault (x => x.ORG_ID == org);
+        // public static string GetDatabase (string org) {
+        //     // ConnectionFactory cf = new ConnectionFactory();
+        //     // return cf.GetNewInstance(databasehost);
+        //     // DataBaseHostEnum host = DataContextConfiguration.DEFAULT_DATABASE;
+        //     string name = null;
+        //     switch (org) {
+        //         case "OPP":
+        //         case "TOPP":
+        //             name = DataBaseHostEnum.OPPN.ToString();
+        //             break;
+        //         case "LAP":
+        //             name = DataBaseHostEnum.LAP.ToString();
+        //             break;
+        //         case "KPP":
+        //             name = DataBaseHostEnum.KPP.ToString();
+        //             break;
+
+        //     }
+        //     return name;
+        // }
+
+        public DataORG GetByOrg (string org) {
+            return _users.FirstOrDefault (x => x.org == org);
         }
 
         // helper methods
@@ -74,13 +96,13 @@ namespace WebApi.Services {
         private string generateJwtToken (UserProfile user) {
             // generate token that is valid for 1 days
             var claims = new List<Claim> {
-                new Claim ("ORG_ID", user.ORG_ID),
-                new Claim ("EMP_ID", user.EMP_ID),
-                new Claim ("EMP_NAME", user.EMP_NAME),
+                new Claim ("org", user.org),
+                new Claim ("userID", user.userID),
+                new Claim ("userName", user.userName),
                 // new Claim ("EMP_NAME_ENG", user.EMP_NAME_ENG),
-                new Claim ("NICKNAME", user.NICKNAME),
-                new Claim ("EMAIL", user.EMAIL),
-                new Claim ("POS_ROLE", user.POS_ROLE)
+                new Claim ("nickname", user.nickname),
+                new Claim ("email", user.email),
+                new Claim ("posrole", user.posrole)
             };
             var tokenHandler = new JwtSecurityTokenHandler ();
             var key = Encoding.ASCII.GetBytes (_appSettings.Secret);
@@ -105,23 +127,23 @@ namespace WebApi.Services {
             UserProfile user = new UserProfile ();
             foreach (JWTDecode j in jwtDecode) {
                 switch (j.Type) {
-                    case "EMP_NAME":
-                        user.EMP_NAME = j.Value;
+                    case "userName":
+                        user.userName = j.Value;
                         break;
-                    case "EMP_ID":
-                        user.EMP_ID = j.Value;
+                    case "userID":
+                        user.userID = j.Value;
                         break;
-                    case "NICKNAME":
-                        user.NICKNAME = j.Value;
+                    case "nickname":
+                        user.nickname = j.Value;
                         break;
-                    case "EMAIL":
-                        user.EMAIL = j.Value;
+                    case "email":
+                        user.email = j.Value;
                         break;
-                    case "ORG_ID":
-                        user.ORG_ID = j.Value;
+                    case "org":
+                        user.org = j.Value;
                         break;
-                    case "POS_ROLE":
-                        user.POS_ROLE = j.Value;
+                    case "posrole":
+                        user.posrole = j.Value;
                         break;
                     default:
                         break;
