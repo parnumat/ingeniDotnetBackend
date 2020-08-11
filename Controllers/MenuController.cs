@@ -26,19 +26,19 @@ namespace WebApi.Controllers {
 
         [Authorize]
         [HttpPost ("")]
-        public ActionResult<AppUserToolModel> PostToGetIcon (UserInputModel model) {
+        public async Task<ActionResult<AppUserToolModel>> PostToGetIcon (UserInputModel model) {
             try {
                 switch (model.fn) {
                     case "fn1":
-                        _results = new AllMethods (_mapper).GetIconMenu (model);
+                        _results = await new AllMethods (_mapper).GetIconMenu (model);
                         break;
                     default: //ยังไม่สนใจ fn 
-                        _results = new AllMethods (_mapper).GetIconMenu (model);
+                        _results = await new AllMethods (_mapper).GetIconMenu (model);
                         break;
                 }
                 if (_results != null)
                     return Ok (_results);
-                return BadRequest (new { message = "Something wa wrong!!" });
+                return BadRequest (new { message = "Information from Oracle be null!!" });
             } catch (Exception e) {
                 return BadRequest (new { message = e.Message });
             }
