@@ -26,7 +26,7 @@ namespace WebApi.Controllers {
 
         [Authorize]
         [HttpPost ("")]
-        public async Task<ActionResult<AppUserToolModel>> PostToGetIcon (UserInputModel model) {
+        public ActionResult<AppUserToolModel> PostToGetIcon (UserInputModel model) {
             try {
                 switch (model.fn) {
                     case "fn1":

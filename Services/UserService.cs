@@ -4,11 +4,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using WebApi.Models.Profiles;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using WebApi.Models;
+using WebApi.Models.Profiles;
 using WebApi.Security;
 
 namespace WebApi.Services {
@@ -77,6 +77,7 @@ namespace WebApi.Services {
                 new Claim ("ORG_ID", user.ORG_ID),
                 new Claim ("EMP_ID", user.EMP_ID),
                 new Claim ("EMP_NAME", user.EMP_NAME),
+                // new Claim ("EMP_NAME_ENG", user.EMP_NAME_ENG),
                 new Claim ("NICKNAME", user.NICKNAME),
                 new Claim ("EMAIL", user.EMAIL),
                 new Claim ("POS_ROLE", user.POS_ROLE)
