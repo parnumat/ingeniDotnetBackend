@@ -13,7 +13,7 @@ using WebApi.Security;
 
 namespace WebApi.Services {
     public interface IUserService {
-        AuthenticateResponse Authenticate (UserProfile model);
+        AuthenticateResponse Authenticate (UserProfile model, string userName);
         IEnumerable<DataORG> GetAll ();
         DataORG GetByOrg (string org);
         UserProfile DecodeToken (string token);
@@ -49,7 +49,7 @@ namespace WebApi.Services {
             // _users = response.ResultAs<List<User>> ();
         }
 
-        public AuthenticateResponse Authenticate (UserProfile model) {
+        public AuthenticateResponse Authenticate (UserProfile model, string userName) {
 
             // var user = _users.SingleOrDefault(x => x.Username == model.Username && x.Password == model.Password);
 
@@ -57,7 +57,7 @@ namespace WebApi.Services {
             if (model == null) return null;
 
             // authentication successful so generate jwt token
-            var token = generateJwtToken (model);
+            var token = generateJwtToken (model, userName);
 
             return new AuthenticateResponse (model, token);
         }
@@ -93,13 +93,14 @@ namespace WebApi.Services {
 
         // helper methods
 
-        private string generateJwtToken (UserProfile user) {
+        private string generateJwtToken (UserProfile user, string userName) {
             // generate token that is valid for 1 days
             var claims = new List<Claim> {
                 new Claim ("org", user.org),
                 new Claim ("userID", user.userID),
                 new Claim ("userName", user.userName),
                 // new Claim ("EMP_NAME_ENG", user.EMP_NAME_ENG),
+                new Claim ("aduserID", userName),
                 new Claim ("nickname", user.nickname),
                 new Claim ("email", user.email),
                 new Claim ("posrole", user.posrole)
@@ -132,6 +133,9 @@ namespace WebApi.Services {
                         break;
                     case "userID":
                         user.userID = j.Value;
+                        break;
+                    case "aduserID":
+                        user.aduserID = j.Value;
                         break;
                     case "nickname":
                         user.nickname = j.Value;

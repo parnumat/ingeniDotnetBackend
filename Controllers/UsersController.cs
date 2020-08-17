@@ -35,7 +35,7 @@ namespace WebApi.Controllers {
                 //Get your profile from base SQL 
                 var response = new MappingUserProfile (_mapper).UserProfileMapped (model);
                 //Get JWT [Json Web Token]
-                var responses = _userService.Authenticate (response);
+                var responses = _userService.Authenticate (response,model.Username);
 
                 return Ok (responses);
             }
