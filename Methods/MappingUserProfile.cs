@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.Models.Profiles;
 using WebApi.Services.DataServices;
-using Newtonsoft.Json.Linq;
 using WebApi.Models;
 
 namespace WebApi.Methods {

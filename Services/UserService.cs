@@ -14,15 +14,11 @@ using WebApi.Security;
 namespace WebApi.Services {
     public interface IUserService {
         AuthenticateResponse Authenticate (UserProfile model, string userName);
-        IEnumerable<DataORG> GetAll ();
         DataORG GetByOrg (string org);
         UserProfile DecodeToken (string token);
-        // string getsss (string org);
     }
 
     public class UserService : IUserService {
-        // users hardcoded for simplicity, store in a db with hashed passwords in production applications
-        // DataBaseHostEnum _user = DataBaseHostEnum.;
         List<DataORG> _users = new List<DataORG> {
             new DataORG {
             org = "OPPN"
@@ -44,9 +40,6 @@ namespace WebApi.Services {
 
         public UserService (IOptions<AppSettings> appSettings) {
             _appSettings = appSettings.Value;
-            // client = new FireSharp.FirebaseClient (config);
-            // FirebaseResponse response = client.Get ("Users/");
-            // _users = response.ResultAs<List<User>> ();
         }
 
         public AuthenticateResponse Authenticate (UserProfile model, string userName) {
@@ -62,31 +55,6 @@ namespace WebApi.Services {
             return new AuthenticateResponse (model, token);
         }
 
-        public IEnumerable<DataORG> GetAll () {
-            return _users;
-        }
-
-        // public static string GetDatabase (string org) {
-        //     // ConnectionFactory cf = new ConnectionFactory();
-        //     // return cf.GetNewInstance(databasehost);
-        //     // DataBaseHostEnum host = DataContextConfiguration.DEFAULT_DATABASE;
-        //     string name = null;
-        //     switch (org) {
-        //         case "OPP":
-        //         case "TOPP":
-        //             name = DataBaseHostEnum.OPPN.ToString();
-        //             break;
-        //         case "LAP":
-        //             name = DataBaseHostEnum.LAP.ToString();
-        //             break;
-        //         case "KPP":
-        //             name = DataBaseHostEnum.KPP.ToString();
-        //             break;
-
-        //     }
-        //     return name;
-        // }
-
         public DataORG GetByOrg (string org) {
             return _users.FirstOrDefault (x => x.org == org);
         }
@@ -94,7 +62,7 @@ namespace WebApi.Services {
         // helper methods
 
         private string generateJwtToken (UserProfile user, string userName) {
-            // generate token that is valid for 1 days
+
             var claims = new List<Claim> {
                 new Claim ("org", user.org),
                 new Claim ("userID", user.userID),
@@ -109,6 +77,7 @@ namespace WebApi.Services {
             var key = Encoding.ASCII.GetBytes (_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor {
                 Subject = new ClaimsIdentity (claims),
+                // generate token that is valid for 1 days
                 Expires = DateTime.UtcNow.AddDays (1),
                 SigningCredentials = new SigningCredentials (new SymmetricSecurityKey (key), SecurityAlgorithms.HmacSha256Signature)
             };

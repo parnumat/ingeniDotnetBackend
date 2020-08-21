@@ -878,7 +878,7 @@ namespace WebApi {
         /// <param name="databasehost"></param>
         /// <param name="storedName"></param>
         /// <param name="param"></param>
-        /// //UserJwt user, 
+        /// //UserJwt user
         public async Task<IEnumerable<object>> CallStoredProcudure (DataBaseHostEnum databasehost, string storedName, List<Param> param) {
             try {
                 var dyParam = new OracleDynamicParameters ();
