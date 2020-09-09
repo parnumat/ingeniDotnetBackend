@@ -23,4 +23,4 @@ API PATH:
   ***Request: {
   "token": "value token
   }
-
+dotnet publish --framework netcoreapp3.1
